@@ -532,7 +532,7 @@ const Home = () => {
                 </div>
                 <div className={"absolute bottom-1 mx-auto p-10 text-center flex flex-col align-center items-center"}>
                     <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
-                    <img className={"h-[3rem]"} src="/public/circle-arrow-down-svgrepo-com.svg" alt=""/>
+                    <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
                 </div>
             </div>
             <div id="stats" className={"w-[100vw] h-[90vw-] bg-[var(--periwinkle)] lg:p-20 p-7 text-black font-bold"}>
