@@ -526,7 +526,7 @@ const Home = () => {
     return (<>
             <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"}>
                 <div className={"my-auto"}>
-                    <h1 className={"text-4xl font-bold text-center blackHeader"}>You're not alone</h1>
+                    <h1 className={"text-4xl font-bold text-center blackHeader"}>Mental Health in the Youth of Washington</h1>
                     <h2 className={"text-2xl text-center mt-5 blackHeader px-10"}>Mental health has been a continuous problem for
                         teenagers all around Washington </h2>
                 </div>
