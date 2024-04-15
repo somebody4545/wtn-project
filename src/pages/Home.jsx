@@ -493,7 +493,15 @@ const Home = () => {
     };
 
     const [svgPaths, setSvgPaths] = useState([]);
-
+    const percentageHeader = () => {
+        if (maxPercent == -1.0) {
+            return <h1 className={"text-5xl"}></h1>;
+        } else if (maxPercent != "") {
+            return <h1 className={"text-5xl"}>{maxPercent}%</h1>;
+        } else {
+            return <h1 className={"text-5xl"}>No Data</h1>;
+        }
+    }
     useEffect(() => {
         const paths = data.map(item => {
             const path = document.getElementById(item.Geography);
@@ -506,7 +514,7 @@ const Home = () => {
     useEffect(() => {
         svgPaths.forEach(({ path, maxPercent }) => {
             if (path) {
-                const color = `rgba(255, 0, 0, ${maxPercent / 100})`; // Change this to your preferred color scale function
+                const color = `rgba(255, 0, 0, ${maxPercent / 50})`; // Change this to your preferred color scale function
                 path.setAttribute('fill', color);
             }
         });
@@ -536,20 +544,16 @@ const Home = () => {
                 </div>
             </div>
             <div id="stats" className={"w-[100vw] h-[90vw-] bg-[var(--periwinkle)] lg:p-20 p-7 text-black font-bold"}>
-                <h1 className={"text-6xl text-black text-right font-bold lg:p-0 pb-10"}>THE STATS</h1>
-                <div className={"flex lg:flex-row flex-col h-full"}>
-                    <div className={"lg:py-10 lg:pr-10 h-200px w-full my-auto"}>
+                <h1 className={"text-6xl text-black text-right font-bold lg:pb-[6rem] pb-10"}>THE STATS</h1>
+                <h1 className={"text-4xl text-black text-center font-bold lg:pb-0 pb-10"}>Teenagers who have considered attempting suicide in the past 12 months</h1>
+                <div className={"flex lg:flex-row flex-col h-full items-stretch"}>
+                    <div className={"lg:py-10 lg:pr-10 h-200px px-0 sm:px-[15%] lg:p-0 w-full my-auto"}>
                         <Washington onPathClick={handlePathClick}/>
                     </div>
-                    <div className={"h-full p-20 pl-0 w-[100%]"}>
+                    <div className={"p-20 pl-0 w-[60%]"}>
+                        <div className={"my-auto py-auto"}>
                         <h1 className={"text-5xl pb-5"} id={"County"}>{countyId} County</h1>
-                        {maxPercent == -1.0 ? (
-                                <h1 className={"text-5xl"}></h1>
-                            ) :
-                            (
-                                <h1 className={"text-5xl"}>{maxPercent}%</h1>
-                            )
-                        }
+                        {percentageHeader()}</div>
                     </div>
                 </div>
             </div>
@@ -559,6 +563,7 @@ const Home = () => {
 
         </>
     );
+
 };
 
 export default Home;

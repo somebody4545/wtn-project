@@ -21,13 +21,16 @@
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'nobel', sans-serif;
     background-color: var(--periwinkle);
     color: white;
 }
 
 #Washington path {
     transition: stroke-width 0.3s ease;
+    filter: drop-shadow(0 0 2px white);
+    z-index: 0;
+    position: absolute;
 }
 .blackHeader {
     text-shadow: 1px 3px 30px white;
@@ -35,7 +38,11 @@ body {
 #Washington path:hover {
     stroke-width: 5;
     cursor: pointer;
-    fill: red;
+    /*fill: red;*/
+/*    make the county glow*/
+    filter: drop-shadow(5px 5px 100px white);
+    z-index: 1000 !important;
+
 }
 html{
     overflow-x: hidden;
