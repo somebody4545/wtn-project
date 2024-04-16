@@ -606,7 +606,7 @@ const Home = () => {
                     emotions,</span>
                     <br/>and talk to a trusted adult
                 </h1>
-                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Mental health is not a <span className={"text-green-400"}>joke.</span>
+                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Mental health is <span className={"text-green-400"}>not a joke.</span>
                 </h1>
                 <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Here are some statistics...</h1>
             </div>
