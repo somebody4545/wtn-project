@@ -543,7 +543,7 @@ const Home = () => {
     useEffect(() => {
         svgPaths.forEach(({ path, maxPercent }) => {
             if (path) {
-                const color = `rgba(255, 0, 0, ${maxPercent / 50})`; // Change this to your preferred color scale function
+                const color = `rgba(0, 255, 0, ${maxPercent / 50})`; // Change this to your preferred color scale function
                 path.setAttribute('fill', color);
             }
         });
@@ -571,24 +571,24 @@ const Home = () => {
                         teenagers all around our state </h2>
                     <p className={"text-xl text-center mt-5 blackHeader px-10"}>Inesh Dey and Iris Dey</p>
                 </div>
-                <a href="#problem" className={"mx-auto text-center flex flex-col content-center items-center"}>
+                <a href="#problem" className={"mx-auto text-center flex flex-col content-center items-center text-white"}>
                     <div
                         className={"absolute bottom-1 mx-auto pb-10 text-center flex flex-col content-center items-center"}>
-                        <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
+                        <h2 className={"text-white font-bold text-xl blackHeader"}>Scroll Down</h2>
                         <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
                     </div>
                 </a>
             </div>
             <Separator/>
             <div id="problem" className={"w-screen min-h-screen bg-black lg:p-20 p-7 lg:px-[20%]"} ref={ref}>
-                <h2 className={"text-6xl font-bold mb-[20vh]"}>THE PROBLEM</h2>
+                <h2 className={"text-6xl font-bold mb-[20vh] pt-[5rem]"}>THE PROBLEM</h2>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to Mental Health
                     America;
                     Washington is the 10th lowest state in terms of mental wellness, with a higher prevalence of mental
                     illness
                     and lower rates of access to care </h1>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Overall Washington is the 18th worst state
-                    in terms of access to health care</h1>
+                    in terms of access to mental healthcare</h1>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>and...</h1>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to UW Medicine, 25% of
                     Washington residents
@@ -622,20 +622,55 @@ const Home = () => {
                 </div>
             </div>
             <Separator/>
+            <div className={"w-[100vw] bg-black lg:p-20 p-7  text-white font-bold"}>
+                <h1 className={"text-6xl font-bold pb-10"}>More Statistics</h1>
+                <p className={"pb-20"}>This data was acquired from the last official Washington State Health Assessment in 2018</p>
+                <img className={"w-[100%] lg:px-[10%] p-5"} src="/overalldata.svg" alt=""/>
+            </div>
+            <Separator/>
+            <div id="wsdh" className={"w-[100vw] bg-black lg:p-[20rem] py-20 p-7  text-white font-bold "}>
+                <h1 className={"text-6xl font-bold pb-10"}>How is the WSDH (Washington State Department of Health) helping?</h1>
+                <p className={"text-xl"}>The Washington State Department of Health has noticed the problem of poor mental health in Washington</p>
+                <br/>
+                <br/>
+                <h1>THE PROBLEM</h1>
+                <br/>
+                <p>“Since 1957 psychologists in Washington State have been licensed and regulated by the state under Chapter 18.83 RCW. Psychologists play a critical role in the delivery of mental health services in Washington State. However, their current scope of practice does not include the authority to prescribe medications for the treatment and management of mental disorders. Adding prescriptive authority to the scope of practice for those eligible psychologists in this state who have successfully completed additional education and training in clinical psychopharmacology will create much needed capacity in a significantly overburdened mental health and primary care system, while ensuring the health and safety of the public.” </p>
+                <br/><br/>
+                <h1>SO WHAT?</h1>
+                <br/>
+                <p>“Washington State is ranked 45th in the United States on measures of mental illness prevalence and access to car (Mental Health America, 2020). Research reviewed by the Center for Disease Control (CDC) suggests that half of all adults in the United States will experience one or more episodes of a mental disorder in their lifetimes (Kessler et al., 2007). Approximately 1 in 5 children will experience a seriously debilitating mental illness (Merikangas et al, 2010). Untreated mental disorders not only negatively impact individuals and their family’s lives, but also adds significantly to the economic burden of our society. The World Health Organization (WHO) estimates that 14% of the global economic burden of disease is attributed to mental disorders, but most people affected do not receive treatment (WHO, 2019).” </p>
+
+            </div>
+            <Separator/>
+            <div id="support" className={"w-[100vw] bg-black lg:p-[20rem] py-20 p-7 text-white font-bold"}>
+                <h1 className={"text-6xl font-bold pb-10"}>Where can I find support?</h1>
+                <p>With the stress of overall stress of youth, it's hard to speak especially with the lack of psychiatrist in our state the best way to communicate is online. Here are some ways you can contact people that can help:<br /> <br /> These are what the Washington State Department of Health recommends...<br /> <br /> If you're in a Mental Health Crisis:</p>
+                <ul>
+                    <li><a href="https://www.crisistextline.org/">Crisis Text Line</a> provides confidential text access from anywhere in the U.S. to a trained crisis counselor. Text HOME to 741741 (24/7/365)</li>
+                    <li><a href="https://www.crisisconnections.org/">Crisis Connections</a> is a 24-hour crisis line that connects people in physical, emotional and financial crisis to services. Call 866-4-CRISIS (<a href="tel:+18664274747">866-427-4747</a>)</li>
+                    <li><a href="https://www.teenlink.org/">Teen Link</a>: call or text 866-833-6546</li>
+                    <li>National <a href="https://www.samhsa.gov/find-help/disaster-distress-helpline">Disaster Distress Helpline</a>: 800-985-5990 or text &ldquo;TalkWithUs&rdquo; to 66746.</li>
+                    <li>Remember its always OK to ask for help (SAMHSA): <a href="https://www.samhsa.gov/young-adults">https://www.samhsa.gov/young-adults</a></li>
+                </ul>
+                <p>What if you&rsquo;re a parent trying to help your kids?</p>
+                <ul>
+                    <li>Behavioral Health Toolkit: Help ways to help your kids cope.</li>
+                    <li><a href="https://www.cstsonline.org/assets/media/documents/CSTS_FS_Finding_Right_Words_Talk_Children_Teens_Coronavirus.pdf">Finding the Right Words to Talk with Children and Teens</a></li>
+                </ul>
+                <p>How can you help someone in need of Mental Health support?</p>
+                <ul>
+                    <li>How to help a friend (NAMI) <a href="https://www.nami.org/Your-Journey/Kids-Teens-and-Young-Adults">https://www.nami.org/Your-Journey/Kids-Teens-and-Young-Adults</a></li>
+                </ul>
+                <p>Learn more: <a href="https://doh.wa.gov/emergencies/covid-19/mental-and-emotional-well-being">https://doh.wa.gov/emergencies/covid-19/mental-and-emotional-well-being</a> <br /> </p>
+            </div>
+            <Separator/>
             <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"}>
                 <div className={"my-auto"}>
                     <h1 className={"text-4xl font-bold text-center blackHeader"}>Want to donate?</h1>
-                    <h2 className={"text-2xl text-center text-blue-500 underline mt-5 blackHeader px-10"}><a href="https://give.uwmedicine.org/give/?source=HCPSYD&appeal=MWEIS">Help the UW Behavior Health Institute</a></h2>
+                    <h2 className={"text-2xl text-center mt-5 blackHeader px-10"}><a href="https://give.uwmedicine.org/give/?source=HCPSYD&appeal=MWEIS">Help the UW Behavioral Health Institute</a></h2>
                 </div>
-                <a href="#problem" className={"mx-auto text-center flex flex-col content-center items-center"}>
-                    <div
-                        className={"absolute bottom-1 mx-auto pb-10 text-center flex flex-col content-center items-center"}>
-                        <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
-                        <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
-                    </div>
-                </a>
             </div>
-
         </>
     );
 

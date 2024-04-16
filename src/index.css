@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.text-white {
+    color: white;
+
+}
+a {
+    color: #2294F2;
+    text-underline: #2294F2;
+    text-decoration: none;
+
+}
 * {
     box-sizing: border-box;
     /* CSS HEX */
@@ -19,7 +28,11 @@
     --periwinkle: hsla(220, 82%, 85%, 1);
     scroll-margin-top: 75px;
 }
-
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin: 0;
+}
 body {
     font-family: 'nobel', sans-serif;
     background-color: var(--periwinkle);
@@ -44,6 +57,8 @@ body {
     z-index: 1000 !important;
 
 }
+
+
 html{
     overflow-x: hidden;
     scroll-behavior: smooth;

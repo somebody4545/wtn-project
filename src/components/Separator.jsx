@@ -5,7 +5,7 @@ const Separator = () => {
         <hr style={{
             color: 'white',
             backgroundColor: 'white',
-            height: 5,
+            height: 3,
             border: 'none',
             width: '100%'
         }} />
