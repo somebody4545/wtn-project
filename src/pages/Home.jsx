@@ -561,7 +561,7 @@ const Home = () => {
         }
     }, [countyId]);
     return (<>
-            <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"} >
+            <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"}>
                 <div className={"my-auto"}>
                     <h1 className={"text-4xl font-bold text-center blackHeader"}>Mental Health in the Youth of
                         Washington</h1>
@@ -584,14 +584,17 @@ const Home = () => {
                 <h2 className={"text-6xl font-bold mb-[20vh]"}>THE PROBLEM</h2>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to Mental Health
                     America;
-                    Washington is the 10th lowest state in terms of mental wellness, with a higher prevalence of mental illness
+                    Washington is the 10th lowest state in terms of mental wellness, with a higher prevalence of mental
+                    illness
                     and lower rates of access to care </h1>
-                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Overall Washington is the 18th worst state in terms of access to health care</h1>
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Overall Washington is the 18th worst state
+                    in terms of access to health care</h1>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>and...</h1>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to UW Medicine, 25% of
                     Washington residents
                     don’t have access to mental health care services </h1>
-                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Washington is one of the lowest ranking nations in terms of mental health care access
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Washington is one of the lowest ranking
+                    nations in terms of mental health care access
                     in the nation,
                     nearly half of all Washington counties do not have a single working psychiatrist.</h1>
                 <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>It’s important to share your
@@ -617,6 +620,20 @@ const Home = () => {
                             {percentageHeader()}</div>
                     </div>
                 </div>
+            </div>
+            <Separator/>
+            <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"}>
+                <div className={"my-auto"}>
+                    <h1 className={"text-4xl font-bold text-center blackHeader"}>Want to donate?</h1>
+                    <h2 className={"text-2xl text-center text-blue-500 underline mt-5 blackHeader px-10"}><a href="https://give.uwmedicine.org/give/?source=HCPSYD&appeal=MWEIS">Help the UW Behavior Health Institute</a></h2>
+                </div>
+                <a href="#problem" className={"mx-auto text-center flex flex-col content-center items-center"}>
+                    <div
+                        className={"absolute bottom-1 mx-auto pb-10 text-center flex flex-col content-center items-center"}>
+                        <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
+                        <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
+                    </div>
+                </a>
             </div>
 
         </>
