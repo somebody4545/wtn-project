@@ -532,17 +532,20 @@ const Home = () => {
         }
     }, [countyId]);
     return (<>
-            <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"}>
-                <div className={"my-auto"}>
-                    <h1 className={"text-4xl font-bold text-center blackHeader"}>Mental Health in the Youth of Washington</h1>
-                    <h2 className={"text-2xl text-center mt-5 blackHeader px-10"}>Mental health has been a continuous problem for
-                        teenagers all around Washington </h2>
-                </div>
-                <div className={"absolute bottom-1 mx-auto p-10 text-center flex flex-col align-center items-center"}>
-                    <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
-                    <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
-                </div>
+    <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"}>
+        <div className={"my-auto"}>
+            <h1 className={"text-4xl font-bold text-center blackHeader"}>Mental Health in the Youth of Washington</h1>
+            <h2 className={"text-2xl text-center mt-5 blackHeader px-10"}>Mental health has been a continuous problem
+                for
+                teenagers all around our state </h2>
+        </div>
+        <a href="#stats">
+            <div className={"absolute bottom-1 mx-auto p-10 text-center flex flex-col align-center items-center"}>
+                <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
+                <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
             </div>
+        </a>
+    </div>
             <div id="stats" className={"w-[100vw] h-[90vw-] bg-[var(--periwinkle)] lg:p-20 p-7 text-black font-bold"}>
                 <h1 className={"text-6xl text-black text-right font-bold lg:pb-[6rem] pb-10"}>THE STATS</h1>
                 <h1 className={"text-4xl text-black text-center font-bold lg:pb-0 pb-10"}>Teenagers who have considered attempting suicide in the past 12 months</h1>
