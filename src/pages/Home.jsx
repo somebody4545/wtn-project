@@ -581,27 +581,33 @@ const Home = () => {
             </div>
             <Separator/>
             <div id="problem" className={"w-screen min-h-screen bg-black lg:p-20 p-7 lg:px-[20%]"} ref={ref}>
-                <h2 className={"text-6xl font-bold mb-[20vh] pt-[5rem]"}>THE PROBLEM</h2>
+                <h2 className={"text-6xl font-bold mb-[20vh] pt-[5rem]"}>THE PROBLEM<p className={"text-xl"}><span className={"text-green-400"}>Interactive.</span> Keep scrolling to
+                    reveal more text.</p></h2>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to Mental Health
                     America;
-                    Washington is the 10th lowest state in terms of mental wellness, with a higher prevalence of mental
+                    Washington is the 10th <span className={"text-green-400"}>lowest</span> state in terms of mental wellness, with a higher prevalence of mental
                     illness
                     and lower rates of access to care </h1>
-                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Overall Washington is the 18th worst state
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Overall Washington is the 18th <span
+                    className={"text-green-400"}>worst</span> state
                     in terms of access to mental healthcare</h1>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>and...</h1>
-                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to UW Medicine, 25% of
-                    Washington residents
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to UW Medicine, <span className={"text-green-400"}>25%
+                    of
+                    Washington residents </span>
                     don’t have access to mental health care services </h1>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Washington is one of the lowest ranking
                     nations in terms of mental health care access
                     in the nation,
-                    nearly half of all Washington counties do not have a single working psychiatrist.</h1>
-                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>It’s important to share your
-                    emotions,
+                    nearly <span className={"text-green-400"}>half</span> of all Washington counties do not have a
+                    single working psychiatrist.</h1>
+                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}><span className={"text-green-400"}>It’s
+                    important to share your
+                    emotions,</span>
                     <br/>and talk to a trusted adult
                 </h1>
-                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Mental health is not a joke.</h1>
+                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Mental health is not a <span className={"text-green-400"}>joke.</span>
+                </h1>
                 <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Here are some statistics...</h1>
             </div>
             <Separator/>

@@ -19,7 +19,7 @@
       }
 
       .cls-3, .cls-14, .cls-15 {
-        stroke: #329d96;
+        stroke: #66bb66;
       }
 
       .cls-17 {
@@ -115,7 +115,7 @@
       }
 
       .cls-5 {
-        stroke: #2c8b84;
+        stroke: #66bb66;
       }
 
       .cls-45 {
@@ -211,7 +211,7 @@
       }
 
       .cls-68 {
-        fill: #2c8b84;
+        fill: #66bb66;
       }
 
       .cls-69 {
@@ -627,7 +627,7 @@
       }
 
       .cls-159 {
-        fill: #e8e8e8;
+        fill: #bbbbbb;
       }
 
       .cls-12 {
@@ -671,7 +671,7 @@
       }
 
       .cls-169 {
-        fill: #eab220;
+        fill: #44aa44;
       }
 
       .cls-170 {
@@ -715,7 +715,7 @@
       }
 
       .cls-180 {
-        fill: #329d96;
+        fill: #77aa77;
       }
 
       .cls-181 {
