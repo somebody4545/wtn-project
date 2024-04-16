@@ -40,7 +40,7 @@ body {
     cursor: pointer;
     /*fill: red;*/
 /*    make the county glow*/
-    filter: drop-shadow(5px 5px 100px white);
+    filter: drop-shadow(5px 5px 10px white);
     z-index: 1000 !important;
 
 }

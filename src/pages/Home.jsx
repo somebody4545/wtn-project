@@ -580,8 +580,8 @@ const Home = () => {
                 </a>
             </div>
             <Separator/>
-            <div className={"w-screen min-h-screen bg-black lg:p-20 p-7 lg:px-[20%]"} ref={ref}>
-                <h2 className={"text-6xl font-bold mb-[50vh]"}>THE PROBLEM</h2>
+            <div id="problem" className={"w-screen min-h-screen bg-black lg:p-20 p-7 lg:px-[20%]"} ref={ref}>
+                <h2 className={"text-6xl font-bold mb-[20vh]"}>THE PROBLEM</h2>
                 <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to Mental Health
                     America;
                     Washington is the 10th lowest state in terms of mental wellness, with a higher prevalence of mental illness
