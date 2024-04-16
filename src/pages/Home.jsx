@@ -538,9 +538,10 @@ const Home = () => {
             <h2 className={"text-2xl text-center mt-5 blackHeader px-10"}>Mental health has been a continuous problem
                 for
                 teenagers all around our state </h2>
+            <p className={"text-xl text-center mt-5 blackHeader px-10"}>Inesh Dey and Iris Dey</p>
         </div>
-        <a href="#stats">
-            <div className={"absolute bottom-1 mx-auto p-10 text-center flex flex-col align-center items-center"}>
+        <a href="#stats" className={"mx-auto text-center flex flex-col content-center items-center"}>
+            <div className={"absolute bottom-1 mx-auto pb-10 text-center flex flex-col content-center items-center"}>
                 <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
                 <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
             </div>
