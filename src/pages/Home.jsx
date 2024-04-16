@@ -685,7 +685,7 @@ const Home = () => {
                     href="/paper.pdf">Project Paper</a></h1>
                 <h1><a
                     href="https://doh.wa.gov/data-and-statistical-reports/washington-tracking-network-wtn/youth-science-contest">WTN
-                    Youth Contest</a></h1>
+                    Youth Science Contest</a></h1>
             </div>
 
         </>
