@@ -543,7 +543,7 @@ const Home = () => {
     useEffect(() => {
         svgPaths.forEach(({ path, maxPercent }) => {
             if (path) {
-                const color = `rgba(0, 255, 0, ${maxPercent / 50})`; // Change this to your preferred color scale function
+                const color = `rgba(0, 255, 50, ${maxPercent / 50})`; // Change this to your preferred color scale function
                 path.setAttribute('fill', color);
             }
         });
