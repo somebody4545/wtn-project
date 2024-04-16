@@ -571,7 +571,7 @@ const Home = () => {
                         teenagers all around our state </h2>
                     <p className={"text-xl text-center mt-5 blackHeader px-10"}>Inesh Dey and Iris Dey</p>
                 </div>
-                <a href="#stats" className={"mx-auto text-center flex flex-col content-center items-center"}>
+                <a href="#problem" className={"mx-auto text-center flex flex-col content-center items-center"}>
                     <div
                         className={"absolute bottom-1 mx-auto pb-10 text-center flex flex-col content-center items-center"}>
                         <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
