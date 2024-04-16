@@ -678,7 +678,7 @@ const Home = () => {
                 </div>
             </div>
             <Separator/>
-            <div id="about" className={"w-[100vw] bg-black lg:p-[20rem] py-20 p-7  text-white font-bold "}>
+            <div id="about" className={"w-[100vw] h-screen bg-black lg:p-[20rem] py-20 p-7  text-white font-bold "}>
                 <h1 className={"text-6xl font-bold pb-10"}>About</h1>
                 <h1><a href="https://github.com/somebody4545/wtn-project">Github Repository</a></h1>
                 <h1><a href="https://doh.wa.gov/data-and-statistical-reports/washington-tracking-network-wtn/youth-science-contest">WTN Youth Contest</a></h1>
