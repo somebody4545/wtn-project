@@ -1,6 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Washington from "../components/Washington.jsx";
-
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Separator from "../components/Separator.jsx";
+gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
     const [countyId, setCountyId] = useState('Select a');
     const [maxPercent, setMaxPercent] = useState(-1.0);
@@ -491,7 +494,33 @@ const Home = () => {
     const handlePathClick = (pathId) => {
         setCountyId(pathId); // Update the state variable when a path is clicked
     };
-
+    function easing(n, x) {
+        var r = Math.pow(n, x) / n + (1 / n) * (x - 1) ;
+        r -= 0.01;
+        if (r < 0) {
+            r = 0
+        }
+        return r;
+    }
+    const ref = useRef(null);
+    useEffect(() => {
+        const lines = ref.current.getElementsByTagName('h1');
+        Array.from(lines).forEach(line => {
+            gsap.from(line, {
+                opacity: 0,
+                y: '+=100',
+                duration: .4,
+                lazy: false,
+                scrollTrigger: {
+                    trigger: line,
+                    start: 'center 80%',
+                    end: "bottom 40%",
+                    toggleActions: "play reverse play reverse",
+                    // markers: true
+                },
+            });
+        });
+    }, []);
     const [svgPaths, setSvgPaths] = useState([]);
     const percentageHeader = () => {
         if (maxPercent == -1.0) {
@@ -532,37 +561,62 @@ const Home = () => {
         }
     }, [countyId]);
     return (<>
-    <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"}>
-        <div className={"my-auto"}>
-            <h1 className={"text-4xl font-bold text-center blackHeader"}>Mental Health in the Youth of Washington</h1>
-            <h2 className={"text-2xl text-center mt-5 blackHeader px-10"}>Mental health has been a continuous problem
-                for
-                teenagers all around our state </h2>
-            <p className={"text-xl text-center mt-5 blackHeader px-10"}>Inesh Dey and Iris Dey</p>
-        </div>
-        <a href="#stats" className={"mx-auto text-center flex flex-col content-center items-center"}>
-            <div className={"absolute bottom-1 mx-auto pb-10 text-center flex flex-col content-center items-center"}>
-                <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
-                <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
+            <div className={"w-[100vw] h-[100vh] bg-black flex flex-col align-center items-center"} >
+                <div className={"my-auto"}>
+                    <h1 className={"text-4xl font-bold text-center blackHeader"}>Mental Health in the Youth of
+                        Washington</h1>
+                    <h2 className={"text-2xl text-center mt-5 blackHeader px-10"}>Mental health has been a continuous
+                        problem
+                        for
+                        teenagers all around our state </h2>
+                    <p className={"text-xl text-center mt-5 blackHeader px-10"}>Inesh Dey and Iris Dey</p>
+                </div>
+                <a href="#stats" className={"mx-auto text-center flex flex-col content-center items-center"}>
+                    <div
+                        className={"absolute bottom-1 mx-auto pb-10 text-center flex flex-col content-center items-center"}>
+                        <h2 className={"font-bold text-xl blackHeader"}>Scroll Down</h2>
+                        <img className={"h-[3rem]"} src="/circle-arrow-down-svgrepo-com.svg" alt=""/>
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-            <div id="stats" className={"w-[100vw] h-[90vw-] bg-[var(--periwinkle)] lg:p-20 p-7 text-black font-bold"}>
-                <h1 className={"text-6xl text-black text-right font-bold lg:pb-[6rem] pb-10"}>THE STATS</h1>
-                <h1 className={"text-4xl text-black text-center font-bold lg:pb-0 pb-10"}>Teenagers who have considered attempting suicide in the past 12 months</h1>
+            <Separator/>
+            <div className={"w-screen min-h-screen bg-black lg:p-20 p-7 lg:px-[20%]"} ref={ref}>
+                <h2 className={"text-6xl font-bold mb-[50vh]"}>THE PROBLEM</h2>
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to Mental Health
+                    America;
+                    Washington is the 10th lowest state in terms of mental wellness, with a higher prevalence of mental illness
+                    and lower rates of access to care </h1>
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Overall Washington is the 18th worst state in terms of access to health care</h1>
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>and...</h1>
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>According to UW Medicine, 25% of
+                    Washington residents
+                    don’t have access to mental health care services </h1>
+                <h1 className={"text-4xl  text-center font-bold mb-[50vh]"}>Washington is one of the lowest ranking nations in terms of mental health care access
+                    in the nation,
+                    nearly half of all Washington counties do not have a single working psychiatrist.</h1>
+                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>It’s important to share your
+                    emotions,
+                    <br/>and talk to a trusted adult
+                </h1>
+                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Mental health is not a joke.</h1>
+                <h1 className={"text-4xl text-center font-bold mb-[50vh]"}>Here are some statistics...</h1>
+            </div>
+            <Separator/>
+            <div id="stats" className={"w-[100vw] bg-black lg:p-20 p-7 text-white font-bold"}>
+                <h1 className={"text-6xl text-right font-bold lg:pb-[6rem] pb-10"}>THE STATS</h1>
+                <h1 className={"text-4xl text-center font-bold pb-2"}>Teenagers who have considered
+                    attempting suicide in the past 12 months</h1>
+                <p className={"text-center text-2xl lg:pb-0 pb-10"}>Click on a county to see its percentage.</p>
                 <div className={"flex lg:flex-row flex-col h-full items-stretch"}>
                     <div className={"lg:py-10 lg:pr-10 h-200px px-0 sm:px-[15%] lg:p-0 w-full my-auto"}>
                         <Washington onPathClick={handlePathClick}/>
                     </div>
                     <div className={"p-20 pl-0 w-[60%]"}>
                         <div className={"my-auto py-auto"}>
-                        <h1 className={"text-5xl pb-5"} id={"County"}>{countyId} County</h1>
-                        {percentageHeader()}</div>
+                            <h1 className={"text-5xl pb-5"} id={"County"}>{countyId} County</h1>
+                            {percentageHeader()}</div>
                     </div>
                 </div>
-            </div>
-            <div className={"w-screen h-screen bg-amber-300"}>
-
             </div>
 
         </>
