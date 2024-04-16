@@ -6,7 +6,8 @@ const Header = () => {
                 <div
                     className='fixed top-0 w-[100vw] backdrop-blur-md bg-[rgba(0,0,0,0.8)] h-[75px] px-10 py-5 flex items-center justify-between z-10'>
                     <a href="/">
-                        <div className='w-max flex items-center'>
+                        <div className='w-max flex flex-row items-center'>
+                            <img src="/public/washingtonlogo.svg" alt="logo" className='w-10 h-10 pr-2'/>
                             <p className={"text-white"}>Teen Mental Health in WA</p>
                         </div>
                     </a>
